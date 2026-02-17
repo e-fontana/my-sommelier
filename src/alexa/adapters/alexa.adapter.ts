@@ -6,4 +6,4 @@ const skill = SkillBuilders.custom()
   .addRequestHandlers(...allHandlers)
   .create();
 
-export const skillAdapter = new ExpressAdapter(skill, true, true);
+export const skillAdapter = new ExpressAdapter(skill, false, false);
