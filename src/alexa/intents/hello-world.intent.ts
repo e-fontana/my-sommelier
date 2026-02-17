@@ -5,10 +5,6 @@ const logger = new Logger('HelloWorldIntentHandler');
 
 export const HelloWorldIntentHandler: RequestHandler = {
   canHandle(handlerInput) {
-    console.log(
-      'Verificando se HelloWorldIntentHandler pode lidar com a requisição...',
-    );
-    console.log(handlerInput);
     return (
       handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
       handlerInput.requestEnvelope.request.intent.name === 'HelloWorldIntent'
