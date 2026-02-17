@@ -10,6 +10,8 @@ export class AlexaLoggerMiddleware implements NestMiddleware {
 
     this.logger.debug(JSON.stringify(req.headers, null, 2));
 
+    console.log('request body:');
+    console.log(req.body);
     next();
   }
 }
