@@ -7,6 +7,7 @@ const logger = new Logger('Bootstrap');
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     rawBody: true,
+    bodyParser: false,
   });
   await app.listen(process.env.PORT ?? 3000).then(() => {
     logger.debug(`Server is running on port ${process.env.PORT ?? 3000}`);
