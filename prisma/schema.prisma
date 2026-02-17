@@ -1,0 +1,13 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Wine {
+  id   String @id @default(uuid(7)) @db.Uuid
+  name String
+}
