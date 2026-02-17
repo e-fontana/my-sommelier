@@ -8,4 +8,4 @@ const skill = SkillBuilders.custom()
   .addErrorHandlers(ErrorIntentHandler)
   .create();
 
-export const skillAdapter = new ExpressAdapter(skill, false, false);
+export const skillAdapter = new ExpressAdapter(skill, true, true);
