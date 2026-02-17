@@ -1,11 +1,11 @@
 import { CancelAndStopIntentHandler } from './cancel-stop.intent';
-import { FallbackIntentHandler } from './fallback-intent.intent';
 import { HelpIntentHandler } from './help-intent.intent';
+import { NavigateHomeIntentHandler } from './navigate-home.intent';
 import { SessionEndedRequestHandler } from './session-ended.intent';
 
 export const handlers = [
   CancelAndStopIntentHandler,
-  FallbackIntentHandler,
+  NavigateHomeIntentHandler,
   HelpIntentHandler,
   SessionEndedRequestHandler,
 ];
