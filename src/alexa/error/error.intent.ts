@@ -1,11 +1,12 @@
 import { Logger } from '@nestjs/common';
-import { RequestHandler } from 'ask-sdk-core';
+import { ErrorHandler } from 'ask-sdk-core';
 
 const logger = new Logger('ErrorIntentHandler');
 
-export const ErrorIntentHandler: RequestHandler = {
-  canHandle(_) {
-    return true;
+export const ErrorIntentHandler: ErrorHandler = {
+  canHandle(handlerInput, error) {
+    logger.error(`Error handled: ${error.message}`, error.stack);
+    return true; // Handle all errors
   },
 
   handle(handlerInput) {
